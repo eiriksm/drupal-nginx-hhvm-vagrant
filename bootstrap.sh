@@ -28,7 +28,7 @@ mv drupal* /usr/share/nginx/html/drupal
 $HOME/.composer/vendor/bin/drush --root=/usr/share/nginx/html/drupal si --db-url=mysqli://drupal_drupal@localhost/drupal --db-su=root --db-su-pw=vagrant -y
 # Make sure www-data can access the files
 chown -R www-data /usr/share/nginx/html/drupal/sites/default/files
-chown -R vagrant /home/vagrant/.drush/cache/default
+chown -R vagrant /home/vagrant/.drush/
 
 # For some reason I have to make the first request towards the new Drupal site with php-fpm
 cp /vagrant/fpm /etc/nginx/sites-available/default
